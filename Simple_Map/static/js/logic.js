@@ -38,14 +38,30 @@ L.control.layers(baseMaps).addTo(map);
 let airportData = "https://raw.githubusercontent.com/Luegreen/Mapping_Earthquakes_D3_Js_Mapbox/main/Simple_Map/static/js/majorAirports.json";
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData = "https://raw.githubusercontent.com/Luegreen/Mapping_Earthquakes_D3_Js_Mapbox/main/Simple_Map/static/js/torontoRoutes.json";
 // Grabbing our GeoJSON data.
-d3.json(airportData).then(function(data) {
+
+// Create a style for the lines.
+let myStyle = {
+    color: "#ffffa1",
+    weight: 2
+}
+
+
+d3.json(torontoData).then(function(data) {
     console.log(data);
+
+L.geoJson(data, {
+    style: myStyle,
+    onEachFeature: function(feature, layer){
+        layer.bindPopup("<h3> Airline: " + feature.properties.airline + "</h3> <hr><h3> Destination: "
+        + feature.properties.dst + "</h3>"); 
+    }
+
+}) 
+        
+        
   // Creating a GeoJSON layer with the retrieved data.
-  L.geoJson(data).addTo(map)
- //.bindPopup("<h2>" +data.features.properties.city + ", " + city.state + "</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
- //.bindPopup("<h2>" + data.features[0].properties.city)
-  ;
+.addTo(map);
 });
 
