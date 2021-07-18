@@ -25,7 +25,7 @@ let baseMaps = {
   // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
     center: [39.5, -98.5],
-    zoom: 5,
+    zoom: 11,
     layers: [satelliteStreets]
 })
 
@@ -51,4 +51,8 @@ d3.json("torontoHoods").then(function(data) {
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJson(data).addTo(map);
 });
+
+
+
+
 
