@@ -27,6 +27,7 @@ let map = L.map('mapid', {
     center: [39.5, -98.5],
     zoom: 3,
     layers: [streets]
+
 })
 
 L.control.layers(baseMaps).addTo(map);
@@ -36,5 +37,4 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJson(data).addTo(map);
 });
-
 
