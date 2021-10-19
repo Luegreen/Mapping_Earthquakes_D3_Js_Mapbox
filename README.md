@@ -1,6 +1,7 @@
 echo # Mapping_Earthquakes_D3_Js_Mapbox
 
-# Using JavaScript, D3, Mapbox, Leaflette and multiple online data sources, the mandate was to create an interactive map with tooltips. The map needed to have three levels of togglable data along with three viewing options as well as a legend. 
+# Using JavaScript, D3, Mapbox, Leaflette and multiple online data sources, 
+An interactive map with tooltips. The map has three levels of togglable data along with three viewing options as well as a legend. 
 
 
 <img width="1149" alt="Screen Shot 2021-07-18 at 11 39 04 PM" src="https://user-images.githubusercontent.com/14239715/126099407-ad63cc59-8f46-44f7-9b99-79935d59160a.png">
