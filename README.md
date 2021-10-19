@@ -1,6 +1,6 @@
 echo # Mapping_Earthquakes_D3_Js_Mapbox
 
-# Using JavaScript, D3, Mapbox, Leaflette and multiple online data sources, 
+# Using JavaScript, D3, Mapbox, Leaflette and multiple online data sources
 An interactive map with tooltips. The map has three levels of togglable data along with three viewing options as well as a legend. 
 
 
